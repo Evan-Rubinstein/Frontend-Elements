@@ -1,0 +1,62 @@
+* { /*Universal settings that help set everything to a standard and avoid auto margin and padding issues*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dropdown-menu {  /*CSS Settings for the entire dropdown menu*/
+    display: flex; /*Sets the display mode to flex for easier movement of objects*/
+    flex-direction: column; /*Sets the display direction to column, so elements are stacked on top of each other*/
+    margin-left: 30px; 
+    margin-top: 30px; /*Margin settings move it away from the top and left side of the screen*/
+}
+
+.dropdown-button {
+    width: 40px;
+    height: 40px; /*Height and width options set the size of the button*/
+    font-size: large; /*Sets the font size in the button to take more space*/
+    border: none; /*Eliminates a border so the button is seamless*/
+    transform: rotate(90deg); /*Rotates the button by default so that the three lines resemble a hamburger menu*/
+    background-color: white; /*Set the background color to white so that the button is invisible, and only the text can be seen*/
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9 ;
+    width: 170px;
+    pointer-events: none;
+    opacity: 0;
+    transform:translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown-content a:hover {
+    background-color:#f1f1f1;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.dropdown-menu > .dropdown-button:focus + .dropdown-content{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-menu > .dropdown-button:focus {
+    animation: rotate 75ms linear normal forwards;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
