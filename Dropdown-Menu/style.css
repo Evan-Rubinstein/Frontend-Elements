@@ -31,28 +31,28 @@
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover { /*Change the background color of menu items when they are hovered over*/
     background-color:#f1f1f1;
 }
 
-.dropdown-content a {
+.dropdown-content a { /*Decoration for list items*/
     text-decoration: none;
     color: black;
     font-size: 20px;
     padding: 10px;
 }
 
-.dropdown-menu > .dropdown-button:focus + .dropdown-content{
+.dropdown-menu > .dropdown-button:focus + .dropdown-content{ /*When the dropdown button is focused on, change the position and opacity of the menu items*/
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 }
 
-.dropdown-menu > .dropdown-button:focus {
+.dropdown-menu > .dropdown-button:focus { /*When the dropdown button is focused on, play the animation*/
     animation: rotate 75ms linear normal forwards;
 }
 
-@keyframes rotate {
+@keyframes rotate { /*Animation that rotates the animated object 90 degrees*/
     from {
         transform: rotate(90deg);
     }
