@@ -23,9 +23,10 @@
 .dropdown-content {
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9 ;
+    background-color: rgb(199, 199, 199) ;
     width: 170px;
     pointer-events: none;
+    border-radius: 5px;
     opacity: 0;
     transform:translateY(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
