@@ -3,3 +3,44 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-size: 20px;
+}
+
+.navbar {
+    background-color: rgb(58, 58, 58);
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    height: 40px;
+    margin: 20px;
+    padding-top: 6px;
+    padding-right: 10px;
+    border-radius: 25px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    min-width: 20em;
+    max-width: 50em;
+}
+
+.navbar li {
+    border-radius: 20px;
+    width: 90px;
+    text-align: center;
+    margin-bottom: 5px;
+    transition: background-color 150ms;
+}
+
+.navbar li:hover {
+    background-color: rgb(85, 57, 211);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
